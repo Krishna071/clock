@@ -5,10 +5,9 @@ var naptime = lunchtime + 2;
 var partytime;
 var evening = 18;
 
-// Getting it to show the current time on the page
 var showCurrentTime = function()
 {
-    // display the string on the webpage
+   
     var clock = document.getElementById('clock');
  
     var currentTime = new Date();
@@ -18,7 +17,7 @@ var showCurrentTime = function()
     var seconds = currentTime.getSeconds();
     var meridian = "AM";
  
-    // Set hours
+  
 	  if (hours >= noon)
 	  {
 		  meridian = "PM";
@@ -29,13 +28,12 @@ var showCurrentTime = function()
 		  hours = hours - 12;
 	  }
  
-    // Set Minutes
     if (minutes < 10)
     {
         minutes = "0" + minutes;
     }
  
-    // Set Seconds
+
     if (seconds < 10)
     {
         seconds = "0" + seconds;
@@ -47,7 +45,7 @@ var showCurrentTime = function()
     clock.innerText = clockTime;
 };
 
-// Getting the clock to increment on its own and change out messages and pictures
+
 var updateClock = function() 
 {
   var time = new Date().getHours();
